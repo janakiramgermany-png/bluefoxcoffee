@@ -1,78 +1,73 @@
 export default function Hero() {
   return (
     <section
-      className="
-        w-full
-        bg-[#f9fbfd]
-        flex
-        items-center
-        justify-center
-        px-6
-        py-24
-        md:py-32
-      "
+      style={{
+        padding: "5rem 2rem",
+        backgroundColor: "#f9fbfd",
+      }}
     >
-      <div className="max-w-3xl text-center">
-        {/* Heading */}
+      <div
+        style={{
+          maxWidth: "900px",
+          margin: "0 auto",
+          textAlign: "center",
+        }}
+      >
         <h1
-          className="
-            text-4xl
-            md:text-5xl
-            font-semibold
-            leading-tight
-            tracking-tight
-            text-slate-900
-            mb-5
-          "
+          style={{
+            fontSize: "3rem",
+            fontWeight: 600,
+            color: "#0f172a",
+            marginBottom: "1rem",
+            letterSpacing: "-0.02em",
+          }}
         >
           Blue Fox Coffee
         </h1>
 
-        {/* Subtitle */}
         <p
-          className="
-            text-base
-            md:text-lg
-            text-slate-600
-            max-w-xl
-            mx-auto
-            mb-10
-          "
+          style={{
+            fontSize: "1.05rem",
+            color: "#475569",
+            maxWidth: "600px",
+            margin: "0 auto 2.5rem",
+            lineHeight: 1.7,
+          }}
         >
           Crafted brews. Calm vibes. Your daily coffee ritual.
         </p>
 
-        {/* CTAs */}
-        <div className="flex justify-center gap-4">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "1.25rem",
+          }}
+        >
           <button
-            className="
-              px-8
-              py-3
-              rounded-md
-              bg-blue-700
-              text-white
-              text-sm
-              font-medium
-              hover:bg-blue-800
-              transition
-            "
+            style={{
+              padding: "0.8rem 2rem",
+              backgroundColor: "#1565c0",
+              color: "#fff",
+              border: "none",
+              borderRadius: "6px",
+              fontSize: "0.95rem",
+              cursor: "pointer",
+            }}
           >
             View Menu
           </button>
 
           <button
-            className="
-              px-8
-              py-3
-              rounded-md
-              border
-              border-blue-700
-              text-blue-700
-              text-sm
-              font-medium
-              hover:bg-blue-50
-              transition
-            "
+            style={{
+              padding: "0.8rem 2rem",
+              backgroundColor: "transparent",
+              color: "#1565c0",
+              border: "1px solid #1565c0",
+              borderRadius: "6px",
+              fontSize: "0.95rem",
+              cursor: "pointer",
+            }}
           >
             Visit Us
           </button>

@@ -5,65 +5,57 @@ export default function Navbar() {
   return (
     <header
       style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
         width: "100%",
-        height: "88px",
         backgroundColor: "#ffffff",
         borderBottom: "1px solid #e5e7eb",
-        zIndex: 1000,
       }}
     >
       <div
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
-          height: "100%",
+          padding: "20px 32px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "0 32px",
         }}
       >
-        {/* LOGO */}
+        {/* BRAND */}
         <Link
           href="/"
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "14px",
+            gap: "12px",
             textDecoration: "none",
           }}
         >
           <Image
             src="/logo/blue-fox-coffee.png"
             alt="Blue Fox Coffee"
-            width={56}
-            height={56}
+            width={44}
+            height={44}
+            style={{ display: "block" }}
             priority
-            style={{
-              display: "block",
-              opacity: 1,
-            }}
           />
           <span
             style={{
-              fontSize: "20px",
+              fontSize: "18px",
               fontWeight: 600,
               color: "#0f172a",
+              letterSpacing: "-0.02em",
             }}
           >
             Blue Fox Coffee
           </span>
         </Link>
 
-        {/* NAV LINKS */}
+        {/* NAV */}
         <nav>
           <ul
             style={{
               display: "flex",
-              gap: "32px",
+              gap: "28px",
               listStyle: "none",
               margin: 0,
               padding: 0,

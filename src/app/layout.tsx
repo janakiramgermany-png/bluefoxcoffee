@@ -1,4 +1,5 @@
 import "./globals.css";
+import Navbar from "@/sections/Navbar";
 
 export default function RootLayout({
   children,
@@ -7,13 +8,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        {/* Offset for fixed navbar */}
-        <div className="pt-20">{children}</div>
+      <body
+        style={{
+          margin: 0,
+          fontFamily:
+            "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          backgroundColor: "#f9fbfd",
+        }}
+      >
+        <Navbar />
+        <main>{children}</main>
       </body>
-      <body style={{ paddingTop: "88px" }}>
-  {children}
-</body>
     </html>
   );
 }
