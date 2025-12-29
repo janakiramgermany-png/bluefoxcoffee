@@ -14,7 +14,7 @@ export default function Navbar() {
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
-          padding: "1.2rem 2rem",
+          padding: "1.4rem 2rem", // slightly taller navbar
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -26,21 +26,21 @@ export default function Navbar() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "0.75rem",
+            gap: "1rem",
             textDecoration: "none",
           }}
         >
           <Image
             src="/logo/blue-fox-coffee.png"
             alt="Blue Fox Coffee Logo"
-            width={48}   // 🔥 increased size
-            height={48}
+            width={64}   // 🔥 increased from 48 → 64
+            height={64}
             priority
           />
 
           <span
             style={{
-              fontSize: "1.25rem",
+              fontSize: "1.4rem",
               fontWeight: 600,
               color: "#0f172a",
               whiteSpace: "nowrap",
@@ -66,7 +66,7 @@ export default function Navbar() {
                 href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                 style={{
                   textDecoration: "none",
-                  fontSize: "0.95rem",
+                  fontSize: "1rem",
                   fontWeight: 500,
                   color: "#334155",
                 }}
