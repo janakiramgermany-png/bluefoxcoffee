@@ -1,6 +1,6 @@
-import { LanguageProvider } from "@/context/LanguageContext";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
+import Providers from "./providers";
 import "./globals.css";
 
 export const metadata = {
@@ -14,21 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        style={{
-          margin: 0,
-          fontFamily:
-            "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, sans-serif",
-          backgroundColor: "#ffffff",
-          color: "#0f172a",
-        }}
-      >
-        <LanguageProvider>
+    <html lang="en">
+      <body>
+        <Providers>
           <Navbar />
           <main>{children}</main>
           <Footer />
-        </LanguageProvider>
+        </Providers>
       </body>
     </html>
   );
