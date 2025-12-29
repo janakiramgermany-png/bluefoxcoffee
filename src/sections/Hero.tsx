@@ -1,57 +1,77 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
       style={{
-        padding: "5rem 2rem",
+        width: "100%",
+        minHeight: "calc(100vh - 96px)", // accounts for navbar height
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
         backgroundColor: "#f9fbfd",
+        padding: "4rem 2rem",
       }}
     >
       <div
         style={{
-          maxWidth: "900px",
-          margin: "0 auto",
+          maxWidth: "1100px",
+          width: "100%",
           textAlign: "center",
         }}
       >
-        <h1
+        {/* BIG BRAND LOGO */}
+        <div
           style={{
-            fontSize: "3rem",
-            fontWeight: 600,
-            color: "#0f172a",
-            marginBottom: "1rem",
-            letterSpacing: "-0.02em",
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "2.5rem",
           }}
         >
-          Blue Fox Coffee
-        </h1>
+          <Image
+            src="/logo/blue-fox-coffee.png"
+            alt="Blue Fox Coffee"
+            width={772}              // ✅ Your requested size
+            height={772}
+            priority
+            style={{
+              maxWidth: "100%",     // responsive safety
+              height: "auto",
+            }}
+          />
+        </div>
 
+        {/* Tagline */}
         <p
           style={{
-            fontSize: "1.05rem",
-            color: "#475569",
-            maxWidth: "600px",
-            margin: "0 auto 2.5rem",
+            fontSize: "1.15rem",
             lineHeight: 1.7,
+            color: "#475569",
+            maxWidth: "640px",
+            margin: "0 auto 2.8rem",
           }}
         >
           Crafted brews. Calm vibes. Your daily coffee ritual.
         </p>
 
+        {/* CTA Buttons */}
         <div
           style={{
             display: "flex",
             justifyContent: "center",
-            gap: "1.25rem",
+            gap: "1.5rem",
+            flexWrap: "wrap",
           }}
         >
           <button
             style={{
-              padding: "0.8rem 2rem",
+              padding: "0.95rem 2.4rem",
               backgroundColor: "#1565c0",
-              color: "#fff",
+              color: "#ffffff",
               border: "none",
               borderRadius: "6px",
               fontSize: "0.95rem",
+              fontWeight: 500,
               cursor: "pointer",
             }}
           >
@@ -60,12 +80,13 @@ export default function Hero() {
 
           <button
             style={{
-              padding: "0.8rem 2rem",
+              padding: "0.95rem 2.4rem",
               backgroundColor: "transparent",
               color: "#1565c0",
               border: "1px solid #1565c0",
               borderRadius: "6px",
               fontSize: "0.95rem",
+              fontWeight: 500,
               cursor: "pointer",
             }}
           >
