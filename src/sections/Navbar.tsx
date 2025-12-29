@@ -5,58 +5,51 @@ export default function Navbar() {
     <header
       style={{
         width: "100%",
-        position: "sticky",
-        top: 0,
-        zIndex: 100,
         backgroundColor: "#ffffff",
+        borderBottom: "1px solid #e5e7eb",
       }}
     >
       <div
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
-          padding: "1.25rem 2rem",
+          padding: "1rem 2rem",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
         }}
       >
-        {/* Logo */}
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <Image
-            src="/logo/blue-fox-coffee.png"
-            alt="Blue Fox Coffee"
-            width={140}
-            height={40}
-            priority
-          />
-        </div>
+        {/* LOGO */}
+        <Image
+          src="/logo/blue-fox-coffee.png"
+          alt="Blue Fox Coffee"
+          width={220}
+          height={60}
+          priority
+          unoptimized
+          style={{
+            display: "block",
+            filter: "contrast(1.2)",
+          }}
+        />
 
-        {/* Navigation */}
+        {/* NAV */}
         <nav>
           <ul
             style={{
               display: "flex",
-              gap: "2.5rem",
+              gap: "2rem",
               listStyle: "none",
               margin: 0,
               padding: 0,
+              color: "#111827",
+              fontWeight: 500,
             }}
           >
-            {["Home", "Menu", "About", "Contact"].map((item) => (
-              <li
-                key={item}
-                style={{
-                  fontSize: "0.95rem",
-                  fontWeight: 500,
-                  color: "#1f2933",
-                  cursor: "pointer",
-                  letterSpacing: "0.02em",
-                }}
-              >
-                {item}
-              </li>
-            ))}
+            <li>Home</li>
+            <li>Menu</li>
+            <li>About</li>
+            <li>Contact</li>
           </ul>
         </nav>
       </div>
