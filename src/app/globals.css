@@ -1,4 +1,4 @@
-/* --- HARD RESET --- */
+/* RESET */
 * {
   box-sizing: border-box;
 }
@@ -11,7 +11,7 @@ body {
   height: auto;
 }
 
-/* 🔴 THIS IS THE IMPORTANT PART */
+/* 🔥 KILL DEFAULT NEXT.JS CENTERING */
 body {
   display: block !important;
   background-color: #ffffff;
@@ -21,10 +21,8 @@ body {
     sans-serif;
 }
 
-/* Remove Next.js default centering */
-#__next,
+/* Make sure nothing centers children */
 main {
   display: block !important;
   width: 100%;
-  height: auto;
 }
