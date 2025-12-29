@@ -11,6 +11,9 @@ export default function RootLayout({
         {/* Offset for fixed navbar */}
         <div className="pt-20">{children}</div>
       </body>
+      <body style={{ paddingTop: "88px" }}>
+  {children}
+</body>
     </html>
   );
 }

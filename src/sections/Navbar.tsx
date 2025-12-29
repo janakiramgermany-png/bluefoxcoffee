@@ -4,67 +4,89 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <header
-      className="
-        fixed
-        top-0
-        left-0
-        w-full
-        z-50
-        bg-white
-        border-b
-        border-slate-200
-      "
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "88px",
+        backgroundColor: "#ffffff",
+        borderBottom: "1px solid #e5e7eb",
+        zIndex: 1000,
+      }}
     >
-      <nav
-        className="
-          max-w-7xl
-          mx-auto
-          flex
-          items-center
-          justify-between
-          px-6
-          h-20
-        "
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "0 32px",
+        }}
       >
-        {/* Logo + Brand */}
-        <Link href="/" className="flex items-center gap-3">
+        {/* LOGO */}
+        <Link
+          href="/"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "14px",
+            textDecoration: "none",
+          }}
+        >
           <Image
             src="/logo/blue-fox-coffee.png"
             alt="Blue Fox Coffee"
-            width={48}
-            height={48}
+            width={56}
+            height={56}
             priority
-            className="object-contain"
+            style={{
+              display: "block",
+              opacity: 1,
+            }}
           />
-          <span className="text-lg font-semibold text-slate-900">
+          <span
+            style={{
+              fontSize: "20px",
+              fontWeight: 600,
+              color: "#0f172a",
+            }}
+          >
             Blue Fox Coffee
           </span>
         </Link>
 
-        {/* Navigation Links */}
-        <ul className="flex items-center gap-8 text-sm font-medium text-slate-700">
-          <li>
-            <Link href="/" className="hover:text-blue-700 transition">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/menu" className="hover:text-blue-700 transition">
-              Menu
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className="hover:text-blue-700 transition">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:text-blue-700 transition">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
+        {/* NAV LINKS */}
+        <nav>
+          <ul
+            style={{
+              display: "flex",
+              gap: "32px",
+              listStyle: "none",
+              margin: 0,
+              padding: 0,
+              fontSize: "15px",
+              fontWeight: 500,
+            }}
+          >
+            {["Home", "Menu", "About", "Contact"].map((item) => (
+              <li key={item}>
+                <Link
+                  href={`/${item === "Home" ? "" : item.toLowerCase()}`}
+                  style={{
+                    color: "#334155",
+                    textDecoration: "none",
+                  }}
+                >
+                  {item}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
