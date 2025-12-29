@@ -6,75 +6,58 @@ export default function Navbar() {
     <header
       style={{
         width: "100%",
-        backgroundColor: "#ffffff",
+        height: "88px",
         borderBottom: "1px solid #e5e7eb",
+        backgroundColor: "#ffffff",
       }}
     >
       <nav
         style={{
-          maxWidth: "1280px",
+          maxWidth: "1200px",
           margin: "0 auto",
-          padding: "1.6rem 2rem", // taller navbar
+          height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          padding: "0 2rem",
         }}
       >
-        {/* Logo */}
-        <Link
-          href="/"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "1.2rem",
-            textDecoration: "none",
-          }}
-        >
+        {/* LOGO ONLY */}
+        <Link href="/" style={{ display: "flex", alignItems: "center" }}>
           <Image
             src="/logo/blue-fox-coffee.png"
             alt="Blue Fox Coffee"
-            width={96}   // 🔥 BIG, clean, professional
-            height={96}
+            width={72}      // adjust if needed (64–80 ideal)
+            height={72}
             priority
           />
-
-          <span
-            style={{
-              fontSize: "1.6rem",
-              fontWeight: 600,
-              color: "#0f172a",
-              whiteSpace: "nowrap",
-            }}
-          >
-            Blue Fox Coffee
-          </span>
         </Link>
 
-        {/* Navigation */}
+        {/* NAV LINKS */}
         <ul
           style={{
-            listStyle: "none",
             display: "flex",
-            gap: "2.5rem",
+            gap: "2rem",
+            listStyle: "none",
             margin: 0,
             padding: 0,
+            fontSize: "0.95rem",
+            fontWeight: 500,
+            color: "#0f172a",
           }}
         >
-          {["Home", "Menu", "About", "Contact"].map((item) => (
-            <li key={item}>
-              <Link
-                href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                style={{
-                  textDecoration: "none",
-                  fontSize: "1rem",
-                  fontWeight: 500,
-                  color: "#334155",
-                }}
-              >
-                {item}
-              </Link>
-            </li>
-          ))}
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/menu">Menu</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
         </ul>
       </nav>
     </header>
