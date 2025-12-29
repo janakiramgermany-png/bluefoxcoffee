@@ -1,6 +1,11 @@
 import "./globals.css";
 import Navbar from "@/sections/Navbar";
 
+export const metadata = {
+  title: "Blue Fox Coffee",
+  description: "Crafted brews. Calm vibes. Your daily coffee ritual.",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -8,16 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        style={{
-          margin: 0,
-          fontFamily:
-            "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-          backgroundColor: "#f9fbfd",
-        }}
-      >
+      <body>
         <Navbar />
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   );
