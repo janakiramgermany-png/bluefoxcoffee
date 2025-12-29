@@ -6,7 +6,7 @@ export default function Navbar() {
     <header
       style={{
         width: "100%",
-        height: "88px",
+        height: "98px",
         borderBottom: "1px solid #e5e7eb",
         backgroundColor: "#ffffff",
       }}
