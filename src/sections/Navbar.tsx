@@ -1,58 +1,70 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
     <header
-      style={{
-        width: "100%",
-        backgroundColor: "#ffffff",
-        borderBottom: "1px solid #e5e7eb",
-      }}
+      className="
+        fixed
+        top-0
+        left-0
+        w-full
+        z-50
+        bg-white
+        border-b
+        border-slate-200
+      "
     >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "1rem 2rem",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
+      <nav
+        className="
+          max-w-7xl
+          mx-auto
+          flex
+          items-center
+          justify-between
+          px-6
+          h-20
+        "
       >
-        {/* LOGO */}
-        <Image
-          src="/logo/blue-fox-coffee.png"
-          alt="Blue Fox Coffee"
-          width={220}
-          height={60}
-          priority
-          unoptimized
-          style={{
-            display: "block",
-            filter: "contrast(1.2)",
-          }}
-        />
+        {/* Logo + Brand */}
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/logo/blue-fox-coffee.png"
+            alt="Blue Fox Coffee"
+            width={48}
+            height={48}
+            priority
+            className="object-contain"
+          />
+          <span className="text-lg font-semibold text-slate-900">
+            Blue Fox Coffee
+          </span>
+        </Link>
 
-        {/* NAV */}
-        <nav>
-          <ul
-            style={{
-              display: "flex",
-              gap: "2rem",
-              listStyle: "none",
-              margin: 0,
-              padding: 0,
-              color: "#111827",
-              fontWeight: 500,
-            }}
-          >
-            <li>Home</li>
-            <li>Menu</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
-      </div>
+        {/* Navigation Links */}
+        <ul className="flex items-center gap-8 text-sm font-medium text-slate-700">
+          <li>
+            <Link href="/" className="hover:text-blue-700 transition">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="/menu" className="hover:text-blue-700 transition">
+              Menu
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" className="hover:text-blue-700 transition">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" className="hover:text-blue-700 transition">
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }
