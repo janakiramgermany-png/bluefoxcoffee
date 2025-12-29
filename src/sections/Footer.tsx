@@ -3,13 +3,14 @@ export default function Footer() {
     <footer
       style={{
         padding: "2rem",
-        textAlign: "center",
+        marginTop: "4rem",
         borderTop: "1px solid #e5e7eb",
-        color: "#64748b",
+        textAlign: "center",
         fontSize: "0.9rem",
+        color: "#64748b",
       }}
     >
-      © {new Date().getFullYear()} Blue Fox Coffee. All rights reserved.
+      © {new Date().getFullYear()} Blue Fox Coffee · Berlin
     </footer>
   );
 }

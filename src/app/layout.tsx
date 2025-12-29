@@ -1,5 +1,6 @@
-import "./globals.css";
 import Navbar from "@/sections/Navbar";
+import Footer from "@/sections/Footer";
+import "./globals.css";
 
 export const metadata = {
   title: "Blue Fox Coffee",
@@ -16,6 +17,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
