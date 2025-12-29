@@ -6,15 +6,15 @@ export default function Navbar() {
     <header
       style={{
         width: "100%",
-        borderBottom: "1px solid #e5e7eb",
         backgroundColor: "#ffffff",
+        borderBottom: "1px solid #e5e7eb",
       }}
     >
       <nav
         style={{
-          maxWidth: "1200px",
+          maxWidth: "1280px",
           margin: "0 auto",
-          padding: "1.4rem 2rem", // slightly taller navbar
+          padding: "1.6rem 2rem", // taller navbar
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -26,21 +26,21 @@ export default function Navbar() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "1rem",
+            gap: "1.2rem",
             textDecoration: "none",
           }}
         >
           <Image
             src="/logo/blue-fox-coffee.png"
-            alt="Blue Fox Coffee Logo"
-            width={64}   // 🔥 increased from 48 → 64
-            height={64}
+            alt="Blue Fox Coffee"
+            width={96}   // 🔥 BIG, clean, professional
+            height={96}
             priority
           />
 
           <span
             style={{
-              fontSize: "1.4rem",
+              fontSize: "1.6rem",
               fontWeight: 600,
               color: "#0f172a",
               whiteSpace: "nowrap",
@@ -55,7 +55,7 @@ export default function Navbar() {
           style={{
             listStyle: "none",
             display: "flex",
-            gap: "2rem",
+            gap: "2.5rem",
             margin: 0,
             padding: 0,
           }}
